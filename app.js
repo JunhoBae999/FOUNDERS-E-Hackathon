@@ -9,6 +9,11 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+const router = require("./routes"); // 위에서 작성한 /routes/index.js 의 모듈인 router 를 임포트 한다.
+router(app); // express app 을 라우팅 하는 모듈로 넘겨준다.
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
